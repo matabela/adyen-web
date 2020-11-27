@@ -77,6 +77,7 @@ export const getErrorReducer = (numDateFields, state) => (acc, field) => {
  * Create an object suitable for sending to our handleOnError function
  */
 export const getErrorObject = (fieldType, rootNode, state) => {
+    console.log('state', state, 'fieldtype', fieldType);
     const error = getProp(state, `errors.${fieldType}`) || DEFAULT_ERROR;
 
     return {
